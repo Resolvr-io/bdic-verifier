@@ -45,7 +45,7 @@ fn update(state: &mut XpubHasher, message: Message) -> Task<Message> {
         Message::XpubInputChanged(value) => {
             state.xpub_input = value;
 
-            state.is_valid_xpub = validate_xpub(&state.xpub_input);
+            state.is_valid_xpub = is_valid_xpub(&state.xpub_input);
 
             state.hash_result = if state.is_valid_xpub {
                 let mut hasher = Sha256::new();
@@ -126,6 +126,6 @@ fn view(state: &XpubHasher) -> Element<'_, Message> {
 }
 
 /// Validates whether the provided string is a valid Bitcoin xpub.
-fn validate_xpub(xpub: &str) -> bool {
+fn is_valid_xpub(xpub: &str) -> bool {
     Xpub::from_str(xpub).is_ok()
 }
