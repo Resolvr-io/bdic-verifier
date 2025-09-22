@@ -4,10 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bitcoin = "0.32"
-hex = "0.4"
-iced = { version = "0.13", default-features = false, features = ["wgpu"] }
-sha2 = "0.10"
+bitcoin = "0.32.7"
+hex = "0.4.3"
+iced = { version = "0.13.1", default-features = false, features = ["wgpu"] }
+sha2 = "0.10.9"
 
 # Optimize release builds for small binary size.
 [profile.release]
