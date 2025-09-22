@@ -1,0 +1,10 @@
+[package]
+name = "bdic-verifier"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iced = "0.13"
+bitcoin = "0.32"
+sha2 = "0.10"
+hex = "0.4"
