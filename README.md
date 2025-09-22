@@ -13,9 +13,11 @@ BDIC Verifier provides a simple interface to:
 
 We, [Resolvr](https://resolvr.io), offer insurance products to protect your self-custodial Bitcoin stack against loss and/or theft. To protect your privacy, we don't want to know what coins you control. However, if you make a claim and attest that your key(s) were lost, we need to be able to ensure that the coins aren't moved on-chain afterwards in order to detect fraudulent claims. For this reason, we require that new insurees provide a SHA256 hash of their xpubs. This way we don't know what coins you control, but you can prove it to us at a later point if necessary by providing us with your actual xpub, which we can then hash ourselves and compare to the hash you originally provided. This is conceptually similar to a password hash.
 
-BDIC Verifier exists to allow you, the insuree, to produce a hash of your xpub without revealing the xpub itself to anyone. You can download a published release, or you can audit the code (it's less than 200 lines), then build and run it from source.
+BDIC Verifier exists to allow you, the insuree, to produce a hash of your xpub without revealing the xpub itself to anyone. You can audit the code (it's less than 150 lines), build it from source, and run it yourself.
 
 ## Installation
+
+Currently there are no published releases, so you'll need to build it from source. But don't worry, it's easy!
 
 ### Prerequisites
 
@@ -29,6 +31,8 @@ BDIC Verifier exists to allow you, the insuree, to produce a hash of your xpub w
 git clone https://github.com/resolvr-io/bdic-verifier.git
 cd bdic-verifier
 ```
+
+Or if you don't have git installed, you can download the repository as a zip file from [here](https://github.com/resolvr-io/bdic-verifier/archive/refs/heads/main.zip). Unzip it and navigate in your terminal to the extracted folder.
 
 2. Build the project:
 
