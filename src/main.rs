@@ -3,7 +3,7 @@
 
 use bitcoin::bip32::Xpub;
 use iced::widget::{button, column, container, text, text_input};
-use iced::{window, Color, Element, Font, Length, Size, Task, Theme};
+use iced::{Color, Element, Font, Length, Size, Task, Theme, window};
 use sha2::{Digest, Sha256};
 use std::str::FromStr;
 
